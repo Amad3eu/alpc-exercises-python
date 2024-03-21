@@ -1,4 +1,4 @@
-# Exercios de algoritmo e lógica de programação com python
+# Exercicios de algoritmo e lógica de programação com python
 
 ## Exercicios propostos:
 
