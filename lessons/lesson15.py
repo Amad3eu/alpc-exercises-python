@@ -1,10 +1,15 @@
-area_pintada = float(input("Digite o tamanho da área a ser pintada em metros quadrados: "))
-cobertura_por_litro = 6  # 6 metros quadrados por litro
-litros_necessarios = area_pintada / cobertura_por_litro
+import math
 
-latas_18 = int(litros_necessarios / 18)
+area_pintada = float(input("Digite o tamanho da área a ser pintada em metros quadrados: "))
+area_com_folga = area_pintada * 1.1
+cobertura_por_litro = 6  # 6 metros quadrados por litro
+litros_necessarios = area_com_folga / cobertura_por_litro
+
+
+latas_18 =  math.ceil(litros_necessarios / 18)
 litros_restantes = litros_necessarios % 18
-galoes_36 = int(litros_restantes / 3.6) + (1 if litros_restantes % 3.6 != 0 else 0)
+galoes_36 =  math.ceil((litros_restantes / 3.6) + (1 if litros_restantes % 3.6 != 0 else 0))
+
 
 preco_lata = 80
 preco_galao = 25
